@@ -1,6 +1,6 @@
 {% set python_min = "3.9.0" %}
 {% set name = "crunchflow" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crunchflow-{{ version }}.tar.gz
-  sha256: 660aa94ec287215f595f0a2b88732c459a1a95000685f05479dddba314e266c5
+  sha256: 7514e3897a519e93cfd85b99123a081ce7bf492df7f16d8442dc9338d1402b4f
 
 build:
   noarch: python
