@@ -1,6 +1,6 @@
 {% set python_min = "3.9.0" %}
 {% set name = "crunchflow" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,17 +8,17 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crunchflow-{{ version }}.tar.gz
-  sha256: 0836e5e7c17d18760c597aa1dab896f9cbc23a6cdf80e773ca5ff2ce8ac22605
+  sha256: 5e9639d4a0dc148fe7cf3c2d2601712d297c266825c5d28572b119d57d30c678
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - uv-build >=0.9.25,<0.10.0
     - pip
   run:
     - python >={{ python_min }},<4.0.0
